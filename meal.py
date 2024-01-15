@@ -1,11 +1,11 @@
 def main():
     y = convert(input("What time is it ? "))
     if 7 <= y <= 8 :
-        print("It's breakfast time")
+        print("breakfast time")
     elif 12 <= y <= 13 :
-        print("It's lunch time")
+        print("lunch time")
     elif 18 <= y <= 19 :
-        print("It's dinner time")
+        print("dinner time")
     else :
         print("")
 
