@@ -20,7 +20,7 @@ d = {
     "Tangerine": 50,
     "Watermelon": 80
       }
-item = input("Item: ").capitalize()
+item = input("Item: ").title()
 if d.get(item) == None:
     print ("")
 else:
