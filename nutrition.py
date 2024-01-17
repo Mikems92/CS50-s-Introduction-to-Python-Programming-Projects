@@ -1,6 +1,6 @@
 d = {
-"Apple":130,
-"Avocado": 50,
+    "Apple": 130,
+    "Avocado": 50,
     "Banana": 110,
     "Cantaloupe": 50,
     "Grapefruit": 60,
@@ -22,6 +22,6 @@ d = {
       }
 item = input("Item: ")
 if d.get(item) == None:
-    print ("Calories :", "")
+    print ("")
 else:
     print ("Calories:", d.get(item))
