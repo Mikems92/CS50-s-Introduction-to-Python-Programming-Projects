@@ -1,5 +1,5 @@
 d = {
-    "Apple": 130,
+    "Apple":130,
     "Avocado": 50,
     "Banana": 110,
     "Cantaloupe": 50,
