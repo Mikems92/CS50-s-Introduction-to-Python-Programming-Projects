@@ -22,6 +22,6 @@ d = {
       }
 item = input("Item: ")
 if d.get(item) == None:
-    print ("Calories :")
+    print ("Calories :", "")
 else:
     print ("Calories:", d.get(item))
