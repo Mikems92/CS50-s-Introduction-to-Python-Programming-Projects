@@ -3,7 +3,7 @@ count = []
 dic = {}
 while True :
     try:
-        item = input("Item:").upper()
+        item = input("").upper()
         fruit.append(item)
         True
     except EOFError :
