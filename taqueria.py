@@ -17,7 +17,7 @@ while True :
         print ("\n")
         break
     if item in dic:
-        total = total + dic[item]
-        print ("Total:", total, "$")
+        total = float(total + dic[item])
+        print (f"Total: {total:.2f} $")
     elif item not in dic:
         True
