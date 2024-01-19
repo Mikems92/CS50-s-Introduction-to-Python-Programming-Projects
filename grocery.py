@@ -9,7 +9,8 @@ while True :
     except EOFError :
         print ("\n")
         break
+for i in fruit:
+    j = fruit.count(i)
+    dic [i] = j
 for k in sorted(dic.keys()):
-    for i in fruit:
-        dic [i] = fruit.count(i)
-print(dic[k], k)
+    print(dic[k], k)
