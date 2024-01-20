@@ -15,4 +15,6 @@ elif len(sys.argv) == 3:
             print(figlet.renderText(input))
         else:
             sys.exit("Invalid usage")
+elif len(sys.argv) == 2:
+    sys.exit("Invalid usage")
 
