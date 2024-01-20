@@ -1,3 +1,2 @@
 import emoji
-output = input("Input :")
-print (emoji.emojize(f"Output : {output}", language=("alias")))
+print (emoji.emojize(f"input("Input :") : {output}", language=("alias")))
