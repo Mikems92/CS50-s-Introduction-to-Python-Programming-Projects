@@ -11,5 +11,5 @@ elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font") and
 else :
     sys.exit("Invalid usage")
 
-input = input ("Output : ")
-print(figlet.renderText(input))
+input = input ("Input: ")
+print("Output: ", figlet.renderText(input))
