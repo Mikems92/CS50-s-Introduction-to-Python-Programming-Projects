@@ -21,10 +21,9 @@ while True:
         month, day, year = new_date.split(" ")
         if month in months :
             month = months.index(month) + 1
-    elif " " in date:
+    elif " " in date and "," not in date :
         month, day, year = date.split(" ")
-        if month in months :
-            month = months.index(month) + 1
+        False
     try:
         if int(month) > 12 or int(day) > 31 :
             True
