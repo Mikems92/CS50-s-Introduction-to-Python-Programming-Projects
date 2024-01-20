@@ -2,6 +2,7 @@ import random
 import sys
 from pyfiglet import Figlet
 
+input = input("Input :")
 figlet = Figlet()
 fonts = figlet.getFonts()
 if len(sys.argv) == 1:
@@ -11,5 +12,5 @@ elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font") and
 else :
     sys.exit("Invalid usage")
 
-input = input("Input :")
+
 print("Output :", figlet.renderText(input))
