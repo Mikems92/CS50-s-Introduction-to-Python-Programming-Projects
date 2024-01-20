@@ -23,7 +23,7 @@ while True:
             month = months.index(month) + 1
     try:
         if int(month) > 12 and int(day) > 31 :
-            True
+            continue
         else:
             break
     except ValueError :
