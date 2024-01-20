@@ -22,10 +22,11 @@ while True:
         if month in months :
             month = months.index(month) + 1
     try:
-        if int(month) > 12 or int(day) > 31 :
-            True
-        else:
-            break
+        if "/" and "," not in date:
+            if int(month) > 12 or int(day) > 31 :
+                True
+            else:
+                break
     except ValueError :
         continue
     else :
