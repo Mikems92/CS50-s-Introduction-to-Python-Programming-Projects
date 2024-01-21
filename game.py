@@ -1,21 +1,23 @@
 import random
 
 while True:
-    n = int(input ("level : "))
-    if n <= 0 :
+    n = input ("level : ")
+    if n.isdigit() and int(n) <= 0:
         True
-    else:
+    elif n.isdigit() and int(n) > 0:
         break
-random_num = random.randint(1, n)
-while True:
-    guess = int(input ("Guess : "))
-    if random_num <= 0:
+    else :
         True
-    elif random_num >= 0:
-        if guess > random_num :
+random_num = random.randint(1, int(n))
+while True:
+    guess = input ("Guess : ")
+    if not guess.isdigit () :
+        True
+    elif guess.isdigit () :
+        if int(guess) > random_num :
             print ("Too large")
             True
-        elif guess < random_num :
+        elif int(guess) < random_num :
             print ("Too small")
             True
         else:
