@@ -10,5 +10,7 @@ while True:
     except EOFError:
         print ("")
         break
-
-print("Adieu, adieu, to", p.join((list_names), final_sep= ""))
+if len(list_names) < 3:
+    print("Adieu, adieu, to", p.join((list_names), final_sep= ""))
+else:
+    print("Adieu, adieu, to", p.join((list_names)))
