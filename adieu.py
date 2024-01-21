@@ -11,4 +11,4 @@ while True:
         print ("")
         break
 
-print("Adieu, adieu, to ", p.join((list_names), final_sep= ""))
+print("Adieu, adieu, to", p.join((list_names), final_sep= ""))
