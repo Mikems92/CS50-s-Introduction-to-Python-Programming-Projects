@@ -15,13 +15,13 @@ while True:
         True
     elif guess.isdigit () :
         if int(guess) > random_num :
-            print ("Too large")
+            print ("Too large!")
             True
         elif int(guess) < random_num :
-            print ("Too small")
+            print ("Too small!")
             True
         else:
-            print ("Just right")
+            print ("Just right!")
             break
 
 
