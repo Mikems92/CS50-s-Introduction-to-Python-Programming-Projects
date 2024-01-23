@@ -6,4 +6,4 @@ def test_shorten():
     assert shorten("NOAH") == "NH"
 
 
-check50 cs50/problems/2022/python/tests/twttr
+
