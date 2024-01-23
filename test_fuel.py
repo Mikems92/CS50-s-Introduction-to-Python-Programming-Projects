@@ -1,4 +1,5 @@
 from fuel import convert, gauge
+import pytest
 
 def test_convert ():
     assert convert ("1/100") == 1
