@@ -21,4 +21,4 @@ def test_is_valid_3():
 def test_is_valid_4():
     assert is_valid("CS0478") == False
     assert is_valid("QS0478") == False
-    assert is_valid("450478") == False
+    assert is_valid("?...") == False
