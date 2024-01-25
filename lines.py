@@ -24,7 +24,7 @@ if sys.argv[1].endswith(".py") :
     else :
         print ("File does not exist")
 else :
-    print ("Not a Python file")
+    sys.exit("Not a Python file")
 
 
 
