@@ -19,6 +19,6 @@ if sys.argv[1].endswith(".csv") :
             pizzas.append ({"Regular Pizza": regular_pizza, "Small": small, "Large": large})
         print(tabulate(pizzas, tablefmt="grid"))
 else:
-    print("Not a CSV file")
+    sys.exit("Not a CSV file")
 
 
