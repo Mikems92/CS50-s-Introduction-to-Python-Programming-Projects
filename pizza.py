@@ -14,10 +14,10 @@ elif path.exists(sys.argv[1]):
 if sys.argv[1].endswith(".csv") :
     pizzas =[]
     with open(sys.argv[1]) as file:
-        reader = csv.reader(file)
+        reader = csv.DictReader(file)
         for row in reader:
             pizzas.append (row)
-        print(tabulate(pizzas, tablefmt="grid"))
+        print(tabulate(pizzas, headers ="keys", tablefmt="grid"))
 else:
     sys.exit("Not a CSV file")
 
