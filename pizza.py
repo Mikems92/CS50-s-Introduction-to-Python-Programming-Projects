@@ -13,10 +13,10 @@ elif path.exists(sys.argv[1]):
 
 if sys.argv[1].endswith(".csv") :
     pizzas =[]
-    with open("regular.csv") as file:
+    with open(sys.argv[1]) as file:
         reader = csv.reader(file)
-        for regular_pizza, small, large in reader:
-            pizzas.append ({"Regular Pizza": regular_pizza, "Small": small, "Large": large})
+        for row in reader:
+            pizzas.append (row)
         print(tabulate(pizzas, tablefmt="grid"))
 else:
     sys.exit("Not a CSV file")
