@@ -2,6 +2,10 @@ import sys
 import csv
 from os import path
 
+x = ""
+file = open("after.csv","w")
+file.write(x)
+file.close()
 
 if len(sys.argv) < 3 :
     sys.exit("Too few command-line arguments")
