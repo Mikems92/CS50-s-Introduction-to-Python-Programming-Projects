@@ -5,7 +5,7 @@ from os import path
 x = ""
 file = open(sys.argv[2],"w")
 file.write(x)
-file.close()
+
 
 if len(sys.argv) < 3 :
     sys.exit("Too few command-line arguments")
@@ -32,7 +32,7 @@ with open(sys.argv[2], "a") as file:
     dw = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     dw.writeheader()
     for i in fl:
-        first, last = i.split(", ").strip()
+        first, last = i.split(", ")
         dw.writerow({"first":first, "last":last, "house":house})
 
 
