@@ -3,7 +3,7 @@ import csv
 from os import path
 
 x = ""
-file = open("after.csv","w")
+file = open(sys.argv[2],"w")
 file.write(x)
 file.close()
 
