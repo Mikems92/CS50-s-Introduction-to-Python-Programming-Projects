@@ -33,6 +33,6 @@ with open(sys.argv[2],"w") as file:
     dw.writeheader()
     for i in fl:
         first, last = i.split(", ")
-        dw.writerow({"first":first, "last":last, "house":house})
+        dw.writerow({"first":first.lstrip(), "last":last.lstrip(), "house":house.lstrip()})
 
 
