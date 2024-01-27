@@ -25,14 +25,14 @@ flh = []
 with open(sys.argv[1]) as file:
     reader = csv.reader(file)
     for name, house in reader:
-        first_last = name.lstrip('"').rstrip('"')
+        first_last = name.lstrip('"').rstrip('"').strip()
         fl.append(first_last)
     fl.pop(0)
 with open(sys.argv[2], "a") as file:
     dw = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     dw.writeheader()
     for i in fl:
-        first, last = i.split(", ")
+        first, last = i.split(", ").strip()
         dw.writerow({"first":first, "last":last, "house":house})
 
 
