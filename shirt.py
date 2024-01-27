@@ -38,6 +38,6 @@ shirt = Image.open("shirt.png")
 width = shirt.width
 height = shirt.height
 with Image.open(sys.argv[1]) as im:
-    photo = ImageOps.fit(im, (width, height), method=0, bleed=0.0, centering=(2, 0.5))
+    photo = ImageOps.fit(im, (width, height), method=0, bleed=0.0, centering=(0.5, 0.5))
     photo.paste(shirt, shirt)
     photo.save(sys.argv[2])
