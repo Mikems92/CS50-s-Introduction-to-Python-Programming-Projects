@@ -21,7 +21,6 @@ else:
     sys.exit(f"Could not read {sys.argv[1]}")
 
 fl = []
-flh = []
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file)
     for row in reader:
