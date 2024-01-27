@@ -25,7 +25,7 @@ flh = []
 with open(sys.argv[1]) as file:
     reader = csv.reader(file)
     for name, house in reader:
-        first_last = name.lstrip('"').rstrip('"')
+        first_last = name.strip('"')
         fl.append(first_last)
     fl.pop(0)
 with open(sys.argv[2], "a") as file:
