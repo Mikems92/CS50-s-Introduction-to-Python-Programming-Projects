@@ -22,13 +22,13 @@ else:
 
 fl = []
 flh = []
-with open("before.csv") as file:
+with open(sys.argv[1]) as file:
     reader = csv.reader(file)
     for name, house in reader:
         first_last = name.lstrip('"').rstrip('"')
         fl.append(first_last)
     fl.pop(0)
-with open("after.csv", "a") as file:
+with open(sys.argv[2], "a") as file:
     dw = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     dw.writeheader()
     for i in fl:
