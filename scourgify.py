@@ -28,7 +28,7 @@ with open(sys.argv[1]) as file:
         last_first = name.strip('"')
         fl.append(last_first)
     fl.pop(0)
-with open(sys.argv[2],"w") as file:
+with open(sys.argv[2], "w", newline = '') as file:
     dw = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     dw.writeheader()
     for i in fl:
