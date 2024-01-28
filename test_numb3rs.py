@@ -8,3 +8,4 @@ def test_check_format():
 def test_check_number():
     assert validate("255.0.78.100") == True
     assert validate("275.2.3.4") == False
+    assert validate("255.1342.2343.400") == False
