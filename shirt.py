@@ -8,15 +8,11 @@ if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
 elif len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
-else :
-    pass
 
 if (sys.argv[1].endswith(".jpg") or sys.argv[1].endswith(".jpeg")) and sys.argv[2].endswith(".png"):
     sys.exit("Input and output have different extensions")
 elif (sys.argv[2].endswith(".jpg") or sys.argv[2].endswith(".jpeg")) and sys.argv[1].endswith(".png"):
     sys.exit("Input and output have different extensions")
-else :
-    pass
 
 root_ext1 = splitext(sys.argv[1])
 root_ext2 = splitext(sys.argv[2])
