@@ -42,6 +42,6 @@ except FileNotFoundError:
 
 shirt = Image.open("shirt.png")
 size = shirt.size
-photo = ImageOps.fit(img, size, method=0, bleed=0.0, centering=(0.5, 0.5))
+photo = ImageOps.fit(img, size)
 photo.paste(shirt, shirt)
 photo.save(sys.argv[2])
