@@ -4,8 +4,13 @@ from numb3rs import validate
 def test_check_format():
     assert validate(r"1.2.3.4") == True
     assert validate(r"1.2.3.4.5") == False
+    assert validate(r"1.2") == False
+    assert validate(r"1.2.3") == False
+    assert validate(r"1") == False
 
 def test_check_number():
-    assert validate(r"255.0.78.100") == True
-    assert validate(r"275.2.3.4") == False
-    assert validate(r"1.2555.1.1") == False
+    assert validate(r"255.255.255.255") == True
+    assert validate(r"512.1.1.1") == False
+    assert validate(r"1.512.1.1") == False
+    assert validate(r"1.1.512.1") == False
+    assert validate(r"1.1.1.512") == False
