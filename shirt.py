@@ -26,6 +26,8 @@ def check_command_line_arg():
         sys.exit("Invalid input")
     if check_entension(file2[1]) == False:
         sys.exit("Invalid input")
+    if file1[1].lower() != file2[1].lower():
+        sys.exit("Input and ouput have different extensions")
 
 def check_entension(file):
     if file in [".jpg",".jpeg",".png"]:
