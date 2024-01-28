@@ -3,41 +3,35 @@ from os.path import splitext
 from os import path
 from PIL import Image, ImageOps
 
+def main():
+    check_command_line_arg()
+    try:
+        img = Image.open(sys.argv[1])
+    except FileNotFoundError:
+        sys.exit("Input does not exist")
+    shirt = Image.open("shirt.png")
+    size = shirt.size
+    muppet =ImageOps.fit(img, size)
+    muppet.paste(shirt, shirt)
+    muppet.save(sys.argv[2])
 
-if len(sys.argv) < 3:
-    sys.exit("Too few command-line arguments")
-elif len(sys.argv) > 3:
-    sys.exit("Too many command-line arguments")
-
-if (sys.argv[1].endswith(".jpg") or sys.argv[1].endswith(".jpeg")) and sys.argv[2].endswith(".png"):
-    sys.exit("Input and output have different extensions")
-elif (sys.argv[2].endswith(".jpg") or sys.argv[2].endswith(".jpeg")) and sys.argv[1].endswith(".png"):
-    sys.exit("Input and output have different extensions")
-
-root_ext1 = splitext(sys.argv[1])
-root_ext2 = splitext(sys.argv[2])
-if (root_ext1[1] == ".jpg" or root_ext1[1] == ".png"
-    or root_ext1[1] == ".jpeg") and (root_ext2[1] == ".jpg" or root_ext2[1] == ".png"
-                                     or root_ext2[1] == ".jpeg"):
-    pass
-else :
-    sys.exit("Invalid input")
-
-if path.exists(sys.argv[1]) :
-    if path.exists(sys.argv[2]):
-        pass
-    else :
+def check_command_line_arg():
+    if len(sys.argv) < 3:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 3:
+        sys.exit("Too many command-line arguments")
+    file1 = splitext(sys.argv[1])
+    file2 = splitext(sys.argv[2])
+    if check_entension(file1[1]) == False:
         sys.exit("Invalid input")
-else:
-    sys.exit("Invalid input")
+    if check_entension(file2[1]) == False:
+        sys.exit("Invalid input")
 
-try:
-    img = Image.open(sys.argv[1])
-except FileNotFoundError:
-    sys.exit("Invalid input")
+def check_entension(file):
+    if file in [".jpg",".jpeg",".png"]:
+        return True
+    return False
 
-shirt = Image.open("shirt.png")
-size = shirt.size
-photo = ImageOps.fit(img, size)
-photo.paste(shirt, shirt)
-photo.save(sys.argv[2])
+
+if __name__=="__main__":
+    main()
