@@ -7,13 +7,11 @@ def main():
 
 def validate(ip):
     if re.search(r"^([0-9]{1,3}\.){3}[0-9]{1,3}$", ip.strip()) :
-        first, sec, third, fourth = ip.split(".")
-        if 0 <= int(first) <= 255 and 0 <= int(sec) <= 255 and 0 <= int(third) <= 255 and 0 <= int(fourth) <= 255:
-            return True
-        elif 0 <= int(first) <= 255 :
-            return False
-        else :
-            return False
+        bytes = ip.split(".")
+        for byte in bytes:
+            if int(byte) < 0 or int(byte) > 255:
+                return False
+        return True
     else:
         return False
 
