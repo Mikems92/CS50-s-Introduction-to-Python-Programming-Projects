@@ -34,10 +34,13 @@ if path.exists(sys.argv[1]) :
 else:
     sys.exit("Invalid input")
 
+try:
+    img = Image.open(sys.argv[1])
+except FileNotFoundError:
+    sys.exit("Invalid input")
+
 shirt = Image.open("shirt.png")
-width = shirt.width
-height = shirt.height
-with Image.open(sys.argv[1]) as im:
-    photo = ImageOps.fit(im, (width, height), method=0, bleed=0.0, centering=(0.5, 0.5))
-    photo.paste(shirt, shirt)
-    photo.save(sys.argv[2])
+size = shirt.size
+photo = ImageOps.fit(img, size, method=0, bleed=0.0, centering=(0.5, 0.5))
+photo.paste(shirt, shirt)
+photo.save(sys.argv[2])
