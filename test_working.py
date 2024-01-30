@@ -8,6 +8,6 @@ def test_convert():
     assert convert("10:30 PM to 8:50 AM") == "22:30 to 08:50"
     with pytest.raises (ValueError) :
         convert("9:60 AM to 5:60 PM")
-        convert("9 AM - 5 PM")
-        convert("09:00 AM - 17:00 PM")
+        convert("9 AM  5 PM")
+        convert("25:61 AM - 25:61 PM")
 
