@@ -24,13 +24,15 @@ def h_less_12(grp1, grp2, grp4, grp5, m1, m2):
     if grp2 and grp5:
         grp2 = int(grp2)
         grp5 = int(grp5)
-        if grp2<60 and grp5<60:
+        if grp2 < 60 and grp5 < 60:
             if m1 == "PM":
                 grp1 += 12
                 return f"{'{:02d}'.format(grp1)}:{'{:02d}'.format(grp2)} to {'{:02d}'.format(grp4)}:{'{:02d}'.format(grp5)}"
             if m2 == "PM":
                 grp4 += 12
                 return f"{'{:02d}'.format(grp1)}:{'{:02d}'.format(grp2)} to {'{:02d}'.format(grp4)}:{'{:02d}'.format(grp5)}"
+        else:
+            raise ValueError
     else:
         if m1 == "PM":
             grp1 += 12
