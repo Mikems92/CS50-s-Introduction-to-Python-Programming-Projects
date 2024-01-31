@@ -16,8 +16,6 @@ def convert(s):
             return h_less_12(group1, time.group(2), group4, time.group(5), meridiem1, meridiem2)
         elif group1 == 12 and group4 == 12:
             return h_equals_12(group1, time.group(2), group4, time.group(5), meridiem1, meridiem2)
-        else :
-            raise ValueError
     else:
         raise ValueError
 
