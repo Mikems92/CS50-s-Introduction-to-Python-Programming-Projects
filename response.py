@@ -1,4 +1,5 @@
 import re
+import validator_collection
 
 
 def main():
