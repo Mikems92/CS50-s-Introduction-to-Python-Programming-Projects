@@ -1,5 +1,5 @@
 import re
-import validator_collection
+from validator_collection import validators, checkers, errors
 
 
 def main():
@@ -8,6 +8,7 @@ def main():
 
 def response (s):
     if match := re.search(r"^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", s):
+        email_address = validators.email(s)
         return "Valid"
     else :
         return "Invalid"
