@@ -6,7 +6,7 @@ import re
 def main():
     date = check_format(input ("Date of Birth: "))
     date_of_birth = convert(age(datetime.strptime(date,"%Y-%m-%d").date()))
-    print (f"{date_of_birth} minutes")
+    print (f"{date_of_birth.capitalize()} minutes")
 
 
 def check_format (f):
