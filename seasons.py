@@ -23,7 +23,7 @@ def age(a):
 
 def convert(c):
     p = inflect.engine()
-    date, time = c.split("days, ")
+    date = re.sub(r" days.+$", " ", c)
     words = p.number_to_words(int(date) * 24 * 60, andword = "")
     return words
 
