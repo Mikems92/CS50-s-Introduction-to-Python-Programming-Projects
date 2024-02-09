@@ -38,6 +38,7 @@ class Jar:
             raise ValueError ("Capacity excedeed")
         self._size = size
 
+
 jar = Jar()
 jar.deposit(10)
 print (jar)
