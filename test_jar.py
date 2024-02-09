@@ -3,7 +3,10 @@ import pytest
 
 
 def test_init():
-    ...
+    jar = Jar ()
+    assert jar.capacity == 12
+    jar = Jar(100)
+    assert jar.capacity == 100
 
 def test_str():
     jar = Jar()
