@@ -7,4 +7,4 @@ def main():
     print (convert(input()))
 
 
-    main()
+main()
