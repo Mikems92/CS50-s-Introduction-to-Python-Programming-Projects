@@ -1,3 +1,2 @@
-txt = (input("Veuillez écrire un texte : "))
-x = txt.lower()
-print (x)
+indoor = input ()
+print(indoor.lower())
