@@ -1,2 +1,1 @@
-indoor = input ()
-print(indoor.lower())
+print(input().lower())
