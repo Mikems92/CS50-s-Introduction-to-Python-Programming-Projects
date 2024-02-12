@@ -1,3 +1,2 @@
-txt = input()
-playback = txt.replace(" ", "...")
+playback = input ().replace(" ","...")
 print (playback)
