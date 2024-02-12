@@ -1,2 +1,1 @@
-playback = input ().replace(" ","...")
-print (playback)
+print(input ().replace(" ","..."))
