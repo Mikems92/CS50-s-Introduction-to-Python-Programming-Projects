@@ -1,11 +1,10 @@
-def convert ():
-        text = input()
-        emoji = text.replace(":)", "🙂").replace(":(", "🙁")
-        return emoji
+def convert (f):
+    faces = f.replace(":)","🙂").replace(":(","🙁")
+    return faces
 
 
 def main():
-     print(convert())
+    print (convert(input()))
 
 
-main()
+    main()
