@@ -1,3 +1,2 @@
-mass = int(input("m: "))
-c = 3*pow (10, 8)
-print ("E :", int((mass*(c**2))))
+mass = int(input ("m: "))
+print (f"E: {int(mass * pow(300000000, 2))}")
