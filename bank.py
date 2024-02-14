@@ -1,8 +1,8 @@
-greeting = input ("Greeting: ")
-greetings = greeting.strip().lower()
-if greetings.startswith("hello"):
+greeting = input ("Greeting :").lower()
+
+if greeting.startswith("hello") :
     print ("$0")
-elif greetings.startswith("h") and not greetings.startswith("hello"):
+elif greeting.startswith("h") :
     print ("$20")
 else :
     print ("$100")
