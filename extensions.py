@@ -1,7 +1,11 @@
 def main():
     name = input ("File name :")
-    print (extension(name))
-
+    if extension(name) in [".gif", ".jpg", ".jpeg", ".png"]:
+        print (f"image/{extension(name)}")
+    elif extension(name) in [".pdf", ".txt", ".zip"]:
+        print (f"application/{extension(name)}")
+    else :
+        print (extension(name))
 
 def extension(name):
     list = [".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"]
