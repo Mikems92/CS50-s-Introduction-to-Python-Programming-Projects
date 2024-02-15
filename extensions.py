@@ -2,7 +2,10 @@ def main():
     name = input ("File name :").lower().strip()
     ext = extension(name).replace(".", "")
     if ext in ["gif", "jpg", "jpeg", "png"]:
-        print (f"image/{ext}")
+        if ext == "jpg":
+            print (f"image/jpeg")
+        else :
+            print (f"image/{ext}")
     elif ext in ["pdf", "txt", "zip"]:
         print (f"application/{ext}")
     else :
