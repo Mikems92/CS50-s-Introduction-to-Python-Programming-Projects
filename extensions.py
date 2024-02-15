@@ -1,18 +1,15 @@
-txt = input("File name : ")
-file_name = txt.strip().lower()
-if file_name.endswith(".gif") :
-    print("image/gif")
-elif file_name.endswith(".jpg"):
-    print("image/jpeg")
-elif file_name.endswith(".jpeg"):
-    print("image/jpeg")
-elif file_name.endswith(".png"):
-    print("image/png")
-elif file_name.endswith(".pdf"):
-    print("application/pdf")
-elif file_name.endswith(".txt"):
-    print("text/plain")
-elif file_name.endswith(".zip"):
-    print("application/zip")
-else:
-    print("application/octet-stream")
+def main():
+    name = input ("File name :")
+    print (extension(name))
+
+
+def extension(name):
+    list = [".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"]
+    for i in list:
+        if name.endswith(i):
+            return i
+    if not name.endswith(i):
+        return "application/octet-stream"
+
+
+main()
