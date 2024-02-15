@@ -1,5 +1,5 @@
 def main():
-    name = input ("File name :").lower()
+    name = input ("File name :").lower().strip()
     ext = extension(name).replace(".", "")
     if ext in ["gif", "jpg", "jpeg", "png"]:
         print (f"image/{ext}")
