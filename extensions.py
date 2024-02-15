@@ -1,0 +1,23 @@
+def main():
+    name = input ("File name :").lower().strip()
+    ext = extension(name).replace(".", "")
+    if ext in ["gif", "jpg", "jpeg", "png"]:
+        if ext == "jpg":
+            print (f"image/jpeg")
+        else :
+            print (f"image/{ext}")
+    elif ext in ["pdf", "txt", "zip"]:
+        print (f"application/{ext}")
+    else :
+        print (extension(name))
+
+def extension(name):
+    list = [".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"]
+    for i in list:
+        if name.endswith(i):
+            return i
+    if not name.endswith(i):
+        return "application/octet-stream"
+
+
+main()
