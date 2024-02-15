@@ -3,7 +3,7 @@ def main():
     print (ext(extension(name)))
 
 
-def ext(extension)
+def ext(extension):
     ext = extension.replace(".", "")
     if ext in ["gif", "jpg", "jpeg", "png"]:
         if ext == jpg :
