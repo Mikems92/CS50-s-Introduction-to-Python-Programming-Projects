@@ -12,8 +12,8 @@ def output (extension, name):
     elif output in ["pdf", "zip"]:
         return f"application/{output}"
     elif extension.endswith("txt"):
-        file, txt = name.split(".")
-        return f"{txt}/{file}"
+        file, txt = name.split(".txt")
+        return f"text/{file}"
     else :
         return (extension)
 
