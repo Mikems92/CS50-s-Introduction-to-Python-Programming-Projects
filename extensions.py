@@ -3,26 +3,24 @@ def main():
     print (output(extension(name), name))
 
 def output (extension, name):
-    output = extension.replace(".", "")
-    if output in ["gif", "jpg", "jpeg", "png"]:
-        if output == "jpg":
+    if extension.endswith("gif", "jpg", "jpeg", "png"):
+        if extension.endswith == "jpg":
             return f"image/jpeg"
         else :
-            return f"image/{output}"
-    elif output in ["pdf", "zip"]:
-        return f"application/{output}"
+            return f"image/{extension}"
+    elif extension.endswith("pdf", "zip"):
+        return f"application/{extension}"
     elif extension.endswith("txt"):
-        file, txt = name.split(".txt")
+        file, _ = name.split(".txt")
         return f"text/{file}"
     else :
         return (extension)
 
 def extension(name):
-    list = [".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"]
-    for i in list:
-        if name.endswith(i):
-            return i
-    if not name.endswith(i):
+    if name.endswith("gif", "jpg", "jpeg", "png", "pdf", "txt", "zip"):
+        _, ext = name.split(".")
+        return ext
+    else :
         return "application/octet-stream"
 
 
