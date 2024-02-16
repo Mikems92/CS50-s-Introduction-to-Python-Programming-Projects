@@ -18,8 +18,7 @@ def output (extension, name):
 
 def extension(name):
     if name.endswith(("gif", "jpg", "jpeg", "png", "pdf", "txt", "zip")):
-        _, ext = name.split(".")
-        return ext
+        return name
     else :
         return "application/octet-stream"
 
