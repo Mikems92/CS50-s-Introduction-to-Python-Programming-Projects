@@ -4,7 +4,7 @@ def main():
 
 def output (extension, name):
     if extension.endswith(("gif", "jpg", "jpeg", "png")):
-        if extension.endswith == "jpg":
+        if extension.endswith("jpg"):
             return f"image/jpeg"
         else :
             return f"image/{extension}"
