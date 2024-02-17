@@ -1,11 +1,18 @@
-x, y, z = input("Expression : ").split(" ")
+expression = input("Expression :")
+x, y, z = expression.split(" ")
 
-match y :
-    case "+":
-        print(float(x) + float(z))
-    case "-":
-        print(float(x) - float(z))
-    case "/":
-        print(float(x) / float(z))
-    case "*":
-        print(float(x) * float(z))
+if y == "+":
+    e = int(x) + int(z)
+    print (f"{e:.1f}")
+elif y == "-":
+    e = int(x) - int(z)
+    print (f"{e:.1f}")
+elif y == "*":
+    e = int(x) * int(z)
+    print (f"{e:.1f}")
+elif y == "/":
+    if z == "0":
+        print ("Impossible")
+    else:
+        e = int(x) / int(z)
+        print (f"{e:.1f}")
