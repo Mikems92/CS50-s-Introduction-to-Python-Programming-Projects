@@ -7,7 +7,9 @@ for i in camelcase:
     elif i.isupper():
         list.append("_")
         list.append(i.lower())
+
 for j in list:
     print (j, end="")
+    
 print("")
 
