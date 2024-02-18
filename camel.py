@@ -1,12 +1,13 @@
-def main():
-    s = snake_case (input("camelCase : "))
-    print (s)
+camelcase = input ("camelCase: ")
+list = list()
 
-def snake_case (camel) :
-    for c in camel :
-        if c.isupper() == True:
-            camel = camel.replace (c, "_" + c.lower())
-    return camel
+for i in camelcase:
+    if i.islower():
+        list.append(i)
+    elif i.isupper():
+        list.append("_")
+        list.append(i.lower())
+for j in list:
+    print (j, end="")
+print("")
 
-
-main()
