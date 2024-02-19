@@ -1,4 +1,4 @@
-amount_due =50
+amount_due = int(50)
 print (f"Amount Due:{amount_due}")
 while amount_due > 0 :
     insert_coin = int(input("Insert Coin:"))
