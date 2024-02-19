@@ -1,5 +1,5 @@
 amount_due =50
-print (f"Amount Due: {amount_due}")
+print (f"Amount Due:{amount_due}")
 while amount_due > 0 :
     insert_coin = int(input("Insert Coin:"))
     if insert_coin == 25 or insert_coin == 10 or insert_coin == 5 :
