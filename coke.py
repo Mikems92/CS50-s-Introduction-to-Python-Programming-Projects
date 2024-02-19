@@ -8,8 +8,6 @@ while amount_due > 0 :
             print ("Change Owed:", amount_due * (-1))
         elif amount_due > 0 :
             print ("Amount Due:", amount_due)
-    else:
-        continue
 
 
 
