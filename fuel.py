@@ -1,5 +1,3 @@
-
-
 while True:
     fraction = input("Fraction: ").strip()
     try:
