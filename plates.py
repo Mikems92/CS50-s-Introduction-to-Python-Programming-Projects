@@ -8,16 +8,14 @@ def main():
 
 def is_valid(s):
     if 2 <= len(s) <= 6 and s[:2].isalpha() and s.isalnum() :
-        if len(s) == 2:
-            return True
-        elif len(s) > 2:
             for i in s:
-                if i.isnumeric():
+                if i.isdigit():
                     c = s.index(i)
-                    if s[c] != 0 and s[c:].isnumeric():
+                    if int(i) != 0 and s[c:].isdigit():
                         return True
-                elif i.isalpha():
-                    return True
+                    else:
+                        return False
+                
 
 
 
