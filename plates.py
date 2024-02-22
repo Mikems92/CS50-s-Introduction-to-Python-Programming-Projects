@@ -15,9 +15,6 @@ def is_valid(s):
                         return True
                     else:
                         return False
-                
-
-
-
+            return True
 
 main()
