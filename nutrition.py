@@ -21,7 +21,6 @@ fruits = {
     "Watermelon": 80
 }
 
-item = input("Item: ").capitalize().strip()
+item = input("Item: ").title().strip()
 if item in fruits:
     print ("Calories:", fruits[item])
-
