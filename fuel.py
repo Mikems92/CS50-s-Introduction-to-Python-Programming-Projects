@@ -1,19 +1,14 @@
-while True :
-    num = input("Fraction: ")
-    index = num.find("/")
-    try:
-        x = int(num[:index])
-        y = int(num[index+1:])
-        fraction = int(x*100/y)
-        if x > y :
-            continue
-    except (ValueError, ZeroDivisionError):
-        continue
-    else:
-        break
-if fraction >= 99:
-    print ("F")
-elif fraction <= 1:
-    print ("E")
-else:
-    print(f"{fraction}%")
+fraction = input("Fraction: ").strip()
+x, y = fraction.split("/")
+
+try:
+    ratio = int(x)*100/int(y)
+    resultat = round (ratio)
+    if resultat <= 1:
+        print ("E")
+    elif resultat >= 99:
+        print ("F")
+    else :
+        print (f"{resultat}%")
+except (ValueError, ZeroDivisionError):
+    ...
