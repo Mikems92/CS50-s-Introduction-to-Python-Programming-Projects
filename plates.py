@@ -11,12 +11,13 @@ def is_valid(s):
         if len(s) == 2:
             return True
         elif len(s) > 2:
-            if s[2:].isnumeric():
-                if s[2] != 0:
+            for i in s:
+                if i.isnumeric():
+                    c = s.index(i)
+                    if s[c] != 0 and s[c:].isnumeric():
+                        return True
+                elif i.isalpha():
                     return True
-            elif s[2:].isalpha():
-                return True
-
 
 
 
