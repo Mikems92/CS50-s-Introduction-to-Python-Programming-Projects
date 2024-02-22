@@ -2,8 +2,8 @@
 
 while True:
     fraction = input("Fraction: ").strip()
-    x, y = fraction.split("/")
     try:
+        x, y = fraction.split("/")
         ratio = int(x)*100/int(y)
         resultat = round (ratio)
         if resultat <= 1:
