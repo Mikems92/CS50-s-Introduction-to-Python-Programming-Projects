@@ -1,4 +1,4 @@
-d = {
+fruits = {
     "Apple": 130,
     "Avocado": 50,
     "Banana": 110,
@@ -19,9 +19,9 @@ d = {
     "Sweet Cherries": 100,
     "Tangerine": 50,
     "Watermelon": 80
-      }
-item = input("Item: ").title()
-if d.get(item) == None:
-    print ("")
-else:
-    print ("Calories:", d.get(item))
+}
+
+item = input("Item: ").capitalize().strip()
+if item in fruits:
+    print ("Calories:", fruits[item])
+
