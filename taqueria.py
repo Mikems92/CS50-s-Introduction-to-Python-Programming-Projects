@@ -12,7 +12,7 @@ menu = {
 total = 0
 while True :
     try:
-        item = input ("Item: ")
+        item = input ("Item: ").title()
         if item in menu :
             price = menu[item]
             total = total + price
