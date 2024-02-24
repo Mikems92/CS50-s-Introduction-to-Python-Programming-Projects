@@ -1,16 +1,15 @@
-fruit = []
-count = []
-dic = {}
-while True :
+list = []
+dict = {}
+while True:
     try:
-        item = input("").upper()
-        fruit.append(item)
-        True
-    except EOFError :
-        print ("\n")
+        item = input().upper()
+        list.append(item)
+        list.sort()
+    except EOFError:
+        for i in list:
+            dict[i] = list.count(i)
         break
-for i in fruit:
-    j = fruit.count(i)
-    dic [i] = j
-for k in sorted(dic.keys()):
-    print(dic[k], k)
+print ("")
+
+for j in dict:
+    print (f"{dict[j]} {j}")
