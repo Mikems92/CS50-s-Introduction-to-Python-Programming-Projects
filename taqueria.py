@@ -1,4 +1,4 @@
-dic = {
+menu = {
     "Baja Taco": 4.25,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -12,12 +12,14 @@ dic = {
 total = 0
 while True :
     try:
-        item = input("Item:").title()
-    except EOFError :
-        print ("\n")
+        item = input ("Item: ")
+        if item in menu :
+            price = menu[item]
+            total = total + price
+            print (f"Total: ${total:.2f}")
+    except (EOFError):
+        print("")
         break
-    if item in dic:
-        total = float(total + dic[item])
-        print (f"${total:.2f}")
-    elif item not in dic:
-        True
+
+
+
