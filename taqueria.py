@@ -17,7 +17,7 @@ while True :
             price = menu[item]
             total = total + price
             print (f"Total: ${total:.2f}")
-    except (EOFError):
+    except EOFError:
         print("")
         break
 
