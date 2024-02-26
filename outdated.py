@@ -24,7 +24,6 @@ while True :
     elif " " in date and "," not in date :
         mm, dd, yyyy = date.split(" ")
         True
-
     try:
         if int(mm) > 12 or int(dd) > 31 :
             True
