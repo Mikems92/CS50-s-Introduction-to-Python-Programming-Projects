@@ -31,8 +31,6 @@ while True:
             break
     except ValueError :
         continue
-    else :
-        True
 
 print (f"{year}-{int(month):02}-{int(day):02}")
 
