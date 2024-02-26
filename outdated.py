@@ -23,7 +23,7 @@ while True :
             if "," in dd:
                 dd = dd.replace(",", "")
     try:
-        if int(mm) > 12 and int(dd) > 31 :
+        if int(mm) > 12 or int(dd) > 31 :
             True
         else:
             break
