@@ -30,7 +30,7 @@ while True :
     except ValueError:
         continue
     else:
-        True
+        False
 
 print (f"{yyyy}-{int(mm):02}-{int(dd):02}")
 
