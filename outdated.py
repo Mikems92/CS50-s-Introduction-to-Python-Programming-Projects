@@ -12,27 +12,26 @@ months = [
         "November",
         "December"
 ]
-while True:
-    date = input("Date :").strip()
+while True :
+    date = input ("Date: ").strip()
     if "/" in date:
-        month, day, year = date.split("/")
-    elif "," in date:
-        new_date = date.replace(", ", " ")
-        month, day, year = new_date.split(" ")
-        if month in months :
-            month = months.index(month) + 1
+        mm, dd, yyyy = date.split("/")
+    elif " " in date and "," in date :
+        new_date = date.replace(",", "")
+        mm, dd, yyyy = date.split(" ")
+        if mm in months:
+            mm = int(months.index(mm)) + 1
     elif " " in date and "," not in date :
-        month, day, year = date.split(" ")
-        False
+        True
     try:
-        if int(month) > 12 or int(day) > 31 :
+        if int(mm) > 12 or int(dd) > 31 :
             True
         else:
             break
-    except ValueError :
+    except ValueError:
         continue
-    else :
-        False
+    else:
+        True
 
-print (f"{year}-{int(month):02}-{int(day):02}")
+print (f"{yyyy}-{int(mm):02}-{int(dd):02}")
 
