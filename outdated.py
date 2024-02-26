@@ -23,7 +23,7 @@ while True :
             mm = int(months.index(mm)) + 1
     elif " " in date and "," not in date :
         mm, dd, yyyy = date.split(" ")
-        True
+        False
     try:
         if int(mm) > 12 or int(dd) > 31 :
             True
