@@ -23,7 +23,7 @@ def main():
             print("EEE")
             tries -= 1
             pass
-        if chances == 0 :
+        if tries == 0 :
             print((f"{x} + {y} = {answer}"))
             tries = 3
             problems -= 1
