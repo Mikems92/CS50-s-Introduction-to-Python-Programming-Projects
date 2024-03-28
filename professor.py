@@ -5,9 +5,10 @@ def main():
     eqn = 10
     score = 0
     chances = 3
+    level = get_level()
     while eqn != 0:
         if chances == 3 :
-            x, y = generate_integer(get_level())
+            x, y = generate_integer(level)
         try:
             user_answer = int(input(f"{x} + {y} = "))
             answer = x + y
