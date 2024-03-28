@@ -3,17 +3,18 @@ import random
 
 def main():
     level = get_level()
-    problems = 10
+    eqn = 10
     score = 0
     chances = 3
-    while problems != 0:
+
+    while eqn != 0:
         if chances == 3 :
             x, y = generate_integer(level)
         try:
             user_answer = int(input(f"{x} + {y} = "))
             answer = x + y
             if user_answer == answer :
-                problems =- 1
+                eqn = eqn - 1
                 score = score + 1
                 chances = 3
                 continue
@@ -26,7 +27,7 @@ def main():
         if chances == 0 :
             print((f"{x} + {y} = {answer}"))
             chances = 3 # Reset chances to generate new equation
-            problems =- 1
+            eqn = eqn - 1
             continue
     print(f"Score: {score}")
 
