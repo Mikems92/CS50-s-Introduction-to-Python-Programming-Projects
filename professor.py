@@ -2,30 +2,31 @@ import random
 
 
 def main():
-    problems = 10
+    eqn = 10
     score = 0
-    tries = 3
-    while problems != 0 :
-        if tries == 3 :
-            x, y = generate_integer(get_level())
+    chances = 3
+    lvl = get_level()
+    while eqn != 0:
+        if chances == 3 :
+            x, y = generate_integer(lvl)
         try:
-            answer = int(input(f"{x} + {y} = "))
-            problem = x + y
-            if answer == problem:
-                problems =- 1
-                score =+ 1
-                tries = 3
+            user_answer = int(input(f"{x} + {y} = "))
+            answer = x + y
+            if user_answer == answer :
+                eqn = eqn - 1
+                score = score + 1
+                chances = 3
                 continue
             else:
                 raise ValueError
         except (ValueError, NameError):
             print("EEE")
-            tries =- 1
+            chances = chances - 1
             pass
-        if tries == 0 :
-            print((f"{x} + {y} = {problem}"))
-            tries = 3
-            problems =- 1
+        if chances == 0 :
+            print((f"{x} + {y} = {answer}"))
+            chances = 3 # Reset chances to generate new equation
+            eqn = eqn - 1
             continue
     print(f"Score: {score}")
 
