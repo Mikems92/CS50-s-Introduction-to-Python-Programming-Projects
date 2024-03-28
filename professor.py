@@ -5,9 +5,10 @@ def main():
     score = 0
     tries = 3
     problems = 10
+    level = get_level()
     while problems > 0 :
         if tries == 3 :
-            x, y = generate_integer(get_level())
+            x, y = generate_integer(level)
         try:
             answer = int(input(f"{x} + {y} = "))
             problem = x + y
