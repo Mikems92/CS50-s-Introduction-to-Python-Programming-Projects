@@ -43,13 +43,13 @@ def get_level():
 
 def generate_integer(level):
     match level:
-        case "int(1)" :
+        case "1" :
             x = random.randint(0, 9)
             y = random.randint(0, 9)
-        case "int(2)" :
+        case "2" :
             x = random.randint(10, 99)
             y = random.randint(10, 99)
-        case "int(3)" :
+        case "3" :
             x = random.randint(100, 999)
             y = random.randint(100, 999)
     return x, y
