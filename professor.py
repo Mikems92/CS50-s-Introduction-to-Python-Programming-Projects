@@ -2,13 +2,12 @@ import random
 
 
 def main():
-    level = get_level()
     problems = 10
     score = 0
     tries = 3
     while problems != 0:
         if tries == 3 :
-            x, y = generate_integer(level)
+            x, y = generate_integer(get_level())
         try:
             answer = int(input(f"{x} + {y} = "))
             problem = x + y
