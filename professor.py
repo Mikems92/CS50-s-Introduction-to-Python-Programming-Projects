@@ -23,7 +23,7 @@ def main():
             tries =- 1
             pass
         if tries == 0:
-            print((f"{x} + {y} = {problem}"))
+            print((f"{x} + {y} = {x + y}"))
             tries = 3
             problems =- 1
             pass
