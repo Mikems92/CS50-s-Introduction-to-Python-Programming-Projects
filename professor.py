@@ -10,11 +10,11 @@ def main():
         if tries == 3 :
             x, y = generate_integer(level)
         try:
-            user_answer = int(input(f"{x} + {y} = "))
-            answer = x + y
-            if user_answer == answer :
+            answer = int(input(f"{x} + {y} = "))
+            problem = x + y
+            if answer == problem :
                 problems -= 1
-                score = score + 1
+                score += 1
                 tries = 3
                 continue
             else:
@@ -24,7 +24,7 @@ def main():
             tries -= 1
             pass
         if tries == 0 :
-            print((f"{x} + {y} = {answer}"))
+            print((f"{x} + {y} = {x + y}"))
             tries = 3
             problems -= 1
             continue
