@@ -13,7 +13,7 @@ def main():
             problem = x + y
             if answer == problem:
                 problems =- 1
-                score = score + 1
+                score =+ 1
                 tries = 3
                 continue
             else:
@@ -23,7 +23,7 @@ def main():
             tries =- 1
             pass
         if tries == 0 :
-            print((f"{x} + {y} = {x + y}"))
+            print((f"{x} + {y} = {problem}"))
             tries = 3
             problems =- 1
             continue
