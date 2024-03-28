@@ -35,23 +35,22 @@ def get_level():
     while True:
         try:
             n = int(input("Level: "))
-            if 1 <= n <= 3:
+            if n == 1 or n == 2 or n == 3:
                 return n
         except:
             pass
 
 
 def generate_integer(level):
-    match level:
-        case "f{1}" :
-            x = random.randint(0, 9)
-            y = random.randint(0, 9)
-        case "f{2}" :
-            x = random.randint(10, 99)
-            y = random.randint(10, 99)
-        case "f{3}" :
-            x = random.randint(100, 999)
-            y = random.randint(100, 999)
+    if level == 1:
+        x = random.randint(0, 9)
+        y = random.randint(0, 9)
+    elif level == 2:
+        x = random.randint(10, 99)
+        y = random.randint(10, 99)
+    elif level == 3:
+        x = random.randint(100, 999)
+        y = random.randint(100, 999)
     return x, y
 
 
