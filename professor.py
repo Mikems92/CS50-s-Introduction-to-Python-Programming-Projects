@@ -14,8 +14,8 @@ def main():
             problem = x + y
             if answer == problem :
                 problems -= 1
-                score += 1
                 tries = 3
+                score += 1
                 continue
             else:
                 raise ValueError
@@ -25,8 +25,8 @@ def main():
             pass
         if tries == 0 :
             print((f"{x} + {y} = {x + y}"))
-            tries = 3
             problems -= 1
+            tries = 3
             continue
     print(f"Score: {score}")
 
