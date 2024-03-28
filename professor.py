@@ -26,7 +26,7 @@ def main():
             print((f"{x} + {y} = {x + y}"))
             tries = 3
             problems =- 1
-            pass
+            continue
     print(f"Score: {score}")
 
 
@@ -55,3 +55,4 @@ def generate_integer(level):
 
 if __name__ == "__main__":
     main()
+
