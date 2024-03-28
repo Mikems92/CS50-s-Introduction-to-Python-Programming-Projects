@@ -5,27 +5,27 @@ def main():
     problems = 10
     score = 0
     tries = 3
-    while problems > 0 :
+    while problems != 0 :
         if tries == 3 :
             x, y = generate_integer(get_level())
         try:
             answer = int(input(f"{x} + {y} = "))
             problem = x + y
-            if answer == problem :
-                problems -= 1
-                score += 1
+            if answer == problem:
+                problems =- 1
+                score =+ 1
                 tries = 3
                 continue
             else:
                 raise ValueError
         except (ValueError, NameError):
             print("EEE")
-            tries -= 1
+            tries =- 1
             pass
         if tries == 0 :
             print((f"{x} + {y} = {problem}"))
             tries = 3
-            problems -= 1
+            problems =- 1
             continue
     print(f"Score: {score}")
 
