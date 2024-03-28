@@ -5,9 +5,9 @@ def main():
     level = get_level()
     problems = 10
     score = 0
-    chances = 3
+    tries = 3
     while problems != 0:
-        if chances == 3 :
+        if tries == 3 :
             x, y = generate_integer(level)
         try:
             user_answer = int(input(f"{x} + {y} = "))
@@ -15,17 +15,17 @@ def main():
             if user_answer == answer :
                 problems -= 1
                 score = score + 1
-                chances = 3
+                tries = 3
                 continue
             else:
                 raise ValueError
         except (ValueError, NameError):
             print("EEE")
-            chances = chances - 1
+            tries -= 1
             pass
         if chances == 0 :
             print((f"{x} + {y} = {answer}"))
-            chances = 3 # Reset chances to generate new equation
+            tries = 3
             problems -= 1
             continue
     print(f"Score: {score}")
